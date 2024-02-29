@@ -1,0 +1,208 @@
+@keyframes animacionDedo{
+    0%{bottom: 3vw;
+        right: 35vw;}
+    50%{bottom: 4vw;
+        right: 34vw;}
+    100% {bottom: 3vw;
+        right: 35vw;
+    }
+}
+@keyframes animacionNombre{
+    00% {
+        transform: translateY(0em);
+      }
+      60% {
+        transform: translateY(-0.3em);
+      }
+      100% {
+        transform: translateY(0em);
+      }
+    }
+
+
+
+header ul{
+    font-family: 'Bebas Neue', sans-serif;
+    color: #ffffff;
+}
+main p, h1, main li{
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+}
+
+header{
+    display: flex;
+    margin-left: 80px;
+}
+
+header h1 a{
+	display:block;
+	text-indent:-1200px;
+	width:167px;
+	height:64px;
+    background:url(Fotos/android-chrome-192x192.png);
+    background-size: 100px 100px;
+	width: 100px;
+    height: 100px;
+
+}
+header nav{
+    flex-grow: 2;
+}
+header ul{
+    display:flex;
+    flex-grow:2;
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+header ul strong{
+    display:none;
+}
+header ul a{
+    color: #ffffff;
+    text-decoration: none;
+}
+header nav > ul{
+	justify-content:space-between;
+}
+header li ul li{
+	margin-top:60px;
+    font-size: 30px;
+    justify-content: space-between;
+    width: 15vw;
+    background-color: none;
+ 
+    
+}
+header ul li ul li a:hover{
+transition: 1s;
+}
+header ul li ul li a:hover{
+    background-color: white;
+    padding: 5px 20px;
+    border-radius: 5px;
+    color: black;
+    box-shadow:0 0 10px 0px white;
+    transition: 1s;
+}
+#video_background{
+    position:absolute;
+    object-fit: cover;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    z-index:-10;
+
+}
+#name{
+    font-size: 150px;
+    
+}
+#name{
+	font-size:7vw;
+	margin-top:5vw;
+    margin-left: 5vw;
+	width:512px;
+}
+#name em{
+	display:block;
+	font-style:normal;
+}
+#name h1:hover{
+    animation-name: animacionNombre;
+    animation-duration: 1s;
+    animation-iteration-count: 2;
+    animation-fill-mode: ease-in-out;
+    border-bottom:solid 1px white;
+
+}
+
+#subtitle p{
+    font-size: 2vw;
+    margin-left: 5vw;
+    margin-bottom: 0;
+
+}
+#navegacion{
+    position: absolute;
+    
+    width: 20vw;
+    height: 25vw;
+    top: 16vw;
+    left: 65vw;
+    
+    background-color: rgb(0, 0, 0);
+    border-radius: 20px;
+    border: solid 3px rgb(255, 254, 254);
+    box-shadow: 10px 10px 5px rgb(37, 46, 0);
+
+}
+#navegacion p{
+    color: black;
+}
+
+ #fotoFondo{
+    position:absolute;
+    width: 10vw;
+    margin-top:13vw;
+    margin-left: 30vw;
+    z-index: -1;
+ }
+
+ #imagenes ul{
+    display:flex;
+    flex-grow:2;
+	list-style:none;
+	padding:0;
+	margin:0;
+    position:absolute;
+    top: 27vw;
+    margin-left: 31.6vw;
+ }
+
+ #cMasMas, #cSharp, #c, #html, #js, #nosql, #sql {
+    width: 1vw;
+ }
+
+ #navegacion ul{
+    list-style: none;
+    margin: 0 0;
+    padding-left: 0;
+ }
+ #navegacion li a{
+    display: block;
+    text-decoration: none;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1vw;
+    margin: 3vw ;
+    text-align: center;
+    border:solid 1px black;
+    color: rgb(0, 0, 0);
+    transition: background-color 0.3s;
+}
+ #navegacion li a:hover{
+
+    background-color: lightgray ;    
+    box-shadow: 0px 0px 5px 6px rgb(37, 46, 0);
+    
+ }
+ 
+
+
+ #dedo {
+    width: 100px;
+    position: absolute;
+    bottom: 3vw;
+    right: 35vw;
+    animation-name: animacionDedo;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: ease-in-out;
+ }
+
+ 
+ 
