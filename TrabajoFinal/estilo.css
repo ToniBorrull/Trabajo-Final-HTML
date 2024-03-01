@@ -1,10 +1,10 @@
 @keyframes animacionDedo{
-    0%{bottom: 3vw;
-        right: 35vw;}
-    50%{bottom: 4vw;
-        right: 34vw;}
-    100% {bottom: 3vw;
-        right: 35vw;
+    0%{bottom: 5%;
+        right: 35%;}
+    50%{bottom: 10%;
+        right: 32%;}
+    100% {bottom: 5%;
+        right:35%;
     }
 }
 @keyframes animacionNombre{
@@ -21,7 +21,7 @@
 
 
 
-header ul{
+header{
     font-family: 'Bebas Neue', sans-serif;
     color: #ffffff;
 }
@@ -48,6 +48,7 @@ header h1 a{
 }
 header nav{
     flex-grow: 2;
+    margin-left:5vw;
 }
 header ul{
     display:flex;
@@ -105,10 +106,15 @@ header ul li ul li a:hover{
 	margin-top:5vw;
     margin-left: 5vw;
 	width:512px;
+   
 }
 #name em{
 	display:block;
 	font-style:normal;
+}
+#name h1{
+    margin-bottom: 0;
+    margin-top: 0;
 }
 #name h1:hover{
     animation-name: animacionNombre;
@@ -122,7 +128,8 @@ header ul li ul li a:hover{
 #subtitle p{
     font-size: 2vw;
     margin-left: 5vw;
-    margin-bottom: 0;
+    margin-top: 0;
+
 
 }
 #navegacion{
@@ -136,7 +143,7 @@ header ul li ul li a:hover{
     background-color: rgb(0, 0, 0);
     border-radius: 20px;
     border: solid 3px rgb(255, 254, 254);
-    box-shadow: 10px 10px 5px rgb(37, 46, 0);
+    box-shadow: 10px 10px 5px rgb(127, 127, 127);
 
 }
 #navegacion p{
@@ -146,7 +153,7 @@ header ul li ul li a:hover{
  #fotoFondo{
     position:absolute;
     width: 10vw;
-    margin-top:13vw;
+    margin-top:8vw;
     margin-left: 30vw;
     z-index: -1;
  }
@@ -158,7 +165,7 @@ header ul li ul li a:hover{
 	padding:0;
 	margin:0;
     position:absolute;
-    top: 27vw;
+    top: 24vw;
     margin-left: 31.6vw;
  }
 
@@ -174,7 +181,7 @@ header ul li ul li a:hover{
  #navegacion li a{
     display: block;
     text-decoration: none;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(175, 175, 175);
     padding: 10px;
     border-radius: 5px;
     font-size: 1vw;
@@ -186,8 +193,8 @@ header ul li ul li a:hover{
 }
  #navegacion li a:hover{
 
-    background-color: lightgray ;    
-    box-shadow: 0px 0px 5px 6px rgb(37, 46, 0);
+    background-color: rgb(255, 255, 255) ;    
+    box-shadow: 0px 0px 5px 0px rgb(255, 255, 255);
     
  }
  
