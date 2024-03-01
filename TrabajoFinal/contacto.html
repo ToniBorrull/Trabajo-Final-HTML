@@ -5,6 +5,7 @@
 <head>
     <title>Toni Borrull</title>
     <link rel="stylesheet" href="estilo.css"/>
+    <link rel="stylesheet" href="estiloLogin.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -35,7 +36,22 @@
 
 
 <main>
- <p>CONTACTO</p>
+    <section id="formName">
+        <img src="Fotos/flechaweb.png" name="fotoFlecha" id="flecha" />
+        <h2>Contacta <em>Conmigo!</em></h2>
+    </section>
+    <section id="formulario">
+        <form method="get">
+            <h1 id="title">Contacto</h1>
+            <p><label for="form_name">Nombre: </label><input type="text" name="name" id="form_name" placeholder="Introduce tu nombre"/></p>
+            <p><label for="form_pass">E-Mail: </label><input type="email" name="password" id="form_pass" placeholder="*****@gmail.com"/></p>
+            <p>Mensaje: <textarea id="mensajeTexto" name="mensajeTexto" rows="2" cols="30"></textarea></p>
+            <p><input type="checkbox" name="form_robot" id="form_robot"><label for="form_robot"/>No soy un robot</p>
+            <p><input type="button" id="form_submit" value="Enviar mensaje"/> </p>
+        
+        </form>
+    </section>
+        
 </main>
 <footer>
     
@@ -43,6 +59,61 @@
 </body>
 
 <script>
+function check_form ()
+{
+let username = document.getElementById('form_name');
+let mail = document.getElementById('form_pass');
+let msg = document.getElementById('mensajeTexto');
+let robot = document.getElementById('form_robot');
 
+
+let check1 = (username.value.length <= 2);
+let check2 = !/^([A-Za-z0-9_\-\.])+\@([gmail|GMAIL])+\.(com)$/.test(mail.value);
+let check3 = (robot.value.checked);
+let check4 = (msg.value.length < 5);
+let OK = (!(check1 || check2 || check3 || check4));
+
+if(check1){
+console.log("ERROR1");
+username.style.border = "2px solid red";
+}else{
+    username.style.border = "2px solid green";
+}
+
+if(check2){
+console.log("ERROR2");
+mail.style.border = "2px solid red";
+}else{
+    mail.style.border = "2px solid green";
+}
+
+if(check3){
+console.log("ERROR3");
+robot.style.border = "2px solid red";
+}else{
+    robot.style.border = "2px solid green";
+}
+
+
+
+if(check4){
+    console.log("ERROR4");
+    msg.style.border = "2px solid red";
+}else{
+    msg.style.border = "2px solid green";
+}
+
+if(OK){
+	console.log("OK FORMULARIO");
+
+}
+}
+
+let name = document.getElementById('form_name');
+
+
+let submitButt = document.getElementById('form_submit');
+
+submitButt.addEventListener('click', check_form);
 </script>
 </html>
