@@ -5,6 +5,7 @@
 <head>
     <title>Toni Borrull</title>
     <link rel="stylesheet" href="estilo.css"/>
+    <link rel="stylesheet" href="estiloJuego.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -35,7 +36,22 @@
 
 
 <main>
-    <p>JUEGO</p>
+<section id="juegoFinal">
+    <h1>Adivina el numero</h1>
+    <p>Debes adivinar un numero entre el 1 y el 100.</p>
+
+    <section id="form">
+        <label for="texto">Pon un numero: </label>
+        <input type="number" min="1" max="100" required id="numeroPlayer" class="guessField">
+        <input type="submit" value="ADIVINAR" id="adivinanza">
+        <input type="submit" value="Reset" id="reset">
+    </section>
+
+    <section class="comprobacion">
+        <p id="ultimoRes"></p>
+        <p id="masMenos"></p>
+    </section>
+</section>
 </main>
 <footer>
     
@@ -43,6 +59,39 @@
 </body>
 
 <script>
+let numeroRandom = Math.floor((Math.random() * 100) + 1);
+let numeroPlayer = document.getElementById('numeroPlayer');
+let enviado = document.getElementById('adivinanza');
+let reset = document.getElementById('reset');
+
+function juego(){
+    if(numeroPlayer.value == numeroRandom){
+        console.log("has ganau");
+        document.getElementById('masMenos').innerHTML = "Has Ganado";
+        document.getElementById('masMenos').style.border = "2px solid green";
+        
+    }
+    if(numeroPlayer.value < numeroRandom){
+        console.log("Numero muy pequeño");
+        document.getElementById('masMenos').innerHTML = "El numero es mas grande";
+        document.getElementById('masMenos').style.border = "2px solid red";
+    }
+    if(numeroPlayer.value > numeroRandom){
+        console.log("Numero muy grande");
+        document.getElementById('masMenos').innerHTML = "El numero es mas pequeño";
+        document.getElementById('masMenos').style.border = "2px solid red";
+    }
+    document.getElementById('ultimoRes').innerHTML = "El ultimo numero fue: "+numeroPlayer.value;
+
+}
+function reseto(){
+    numeroRandom = Math.floor((Math.random() * 100) + 1);
+    document.getElementById('masMenos').innerHTML = "El numero se ha reiniciado";
+    document.getElementById('masMenos').style.border = "2px solid orange";
+
+}
+enviado.addEventListener('click', juego);
+reset.addEventListener('click', reseto);
 
 </script>
 </html>

@@ -1,0 +1,123 @@
+@keyframes animacionDedo{
+0%{
+    top: 25vw;
+    margin-left: 61vw;
+}
+50%{
+    top: 23vw;
+    margin-left: 63vw;
+}
+100%{
+    top: 25vw;
+    margin-left: 61vw;
+}
+}
+
+#titulo h1{
+position: absolute;
+font-size:10vw;
+margin-top:5vw;
+margin-left: 15vw;
+width:512px;}
+
+#aficiones h1 h2 h3 h4, h1,#desarrollo h4{
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+#aficiones p{
+    font-family: 'Montserrat', sans-serif;
+    list-style: none;
+}
+#deportes{
+    background-color: rgb(99, 99, 99);
+    border: 2px solid white;
+    position: absolute;
+    font-size: 0.6vw;
+    border-radius: 10px;
+    padding: 0 20px;
+    padding-bottom: 200px;
+    box-shadow: 0 0 5px 5px green;
+    margin-left: 1100px;
+ 
+}
+#deportes h2,#juegos h3, #desarrollo h4{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2vw;
+    color: white;
+}
+#deportes ul {
+    list-style: none;
+    display: flex;
+}
+#tennis{
+    position: absolute;
+    display: flex;
+    top: 21vw;
+    left: 65vw;
+    width: 100px;
+    border-radius: 10px;
+    transition: 2s;
+}
+#esqui{
+    position: absolute;
+    display: flex;
+    top: 21vw;
+    left: 77vw;
+    width: 100px;
+    border-radius: 10px;
+    transition: 2s;
+}
+#esqui:hover,#tennis:hover{
+    width: 200px;
+}
+#deportes ul li ul li em{
+    display: block;
+}
+#fraseDeportes em,#fraseJuegos em,#fraseDesarrollo em{
+    display: block;
+}
+#fotoDedo{
+    position: absolute;
+    display: flex;
+    top: 25vw;
+    margin-left: 60vw;
+    width: 2vw;
+    transition: 2s;
+    animation-name: animacionDedo;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: ease-in;
+}
+
+#juegos{
+    position: absolute;
+    color: white;
+    background-color: rgb(99, 99, 99);
+    padding: 0 2vw;
+    padding-top: 0;
+    padding-bottom: 2vw;
+    border-radius: 10px;
+    border: 2px solid white;
+    box-shadow: 0 0 5px 5px green;
+    margin-top: 24vw;
+    margin-left: 5vw;
+}
+#desarrollo{
+    position: absolute;
+    color: white;
+    background-color: rgb(99, 99, 99);
+    padding: 1vw;
+    border-radius: 10px;
+    border: 2px solid white;
+    box-shadow: 0 0 5px 5px green;
+    margin-top: 24vw;
+    margin-left: 45vw;
+}
+#logoAmbeak{
+    width: 100px;
+    display: block;
+    transition: 2s;
+}
+#logoAmbeak:hover{
+    width: 200px;
+}
